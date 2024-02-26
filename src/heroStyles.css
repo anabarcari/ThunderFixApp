@@ -1,0 +1,59 @@
+/* heroStyles.css */
+
+/* Add some spacing to the cards */
+.container {
+    margin-top: 50px;
+  }
+  
+  /* Style the card */
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the card */
+  .card:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the number in the card */
+  .number {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  /* Style the heading in the card */
+  .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  /* Style the paragraph in the card */
+  .card p {
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Style the "Learn More" link in the card */
+  .card a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  

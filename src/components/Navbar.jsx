@@ -28,7 +28,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="w-32 h-20 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+          <p className="text-white text-[16px] font-bold cursor-pointer flex">
             Thunder Fix &nbsp;
             <span className="sm:block hidden">| Auto Hail Repair</span>
           </p>
@@ -36,8 +36,8 @@ const Navbar = () => {
 
         {/* Call Now Button */}
         <div className="flex-grow text-center">
-          <div className="text-white text-[18px] font-bold flex items-center">
-            <span role="img" aria-label="phone emoji" className="mr-10" style={{ color: "white" }}>
+          <div className="text-white text-[16px] font-bold flex items-left">
+            <span role="img" aria-label="phone emoji" className="mr-4" style={{ color: "white" }}>
               
             </span>
             <a href="tel: +1888-503-0755">Tel: 888-503-0755</a>
@@ -64,7 +64,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[18px] h-[18px] object-contain cursor-pointer"
+            className="w-[38px] h-[18px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           ></img>
         </div>

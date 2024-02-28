@@ -20,7 +20,7 @@ const Hero = () => {
    
     <section className="relative w-full h-screen bg-primary bg-top sm:bg-primary bg-contain md:bg-cover md:bg-top md:bg-fixed bg-no-repeat">
       <div className={`absolute inset-0 max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-center justify-center`}>
-        <img src={bmw} alt="BMW" className="relative w-full mt w-auto h-56 mx-auto sm:h-82 lg:h-96 xl:h-[500px]" />
+        <img src={bmw} alt="BMW" className="relative w-76 w-auto h-56 mx-auto sm:h-82 lg:h-96 xl:h-[500px]" />
         <div className="text-center bg-white p-5 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-15 text-container rounded-lg shadow-neon mt-[-59px] sm:mt-[-130px]">
           <h1 className={`${styles.heroHeadText} text-white`} style={{ textShadow: '0 0 10px #aaa6c3, 0 0 30px #000000, 0 0 35px #000000' }}>
             <span className='text-white'>WE CARE ABOUT YOUR CAR</span>

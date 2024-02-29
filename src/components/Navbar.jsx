@@ -45,7 +45,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links (About, Work, Contact) */}
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-8">
           {navLinks.map((Link) => (
             <li
               key={Link.id}
@@ -60,11 +60,11 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Toggle */}
-        <div className="sm:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[38px] h-[18px] object-contain cursor-pointer"
+            className="w-[48px] h-[18px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           ></img>
         </div>

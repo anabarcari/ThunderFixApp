@@ -10,8 +10,7 @@ const App=()=> {
   return (
   
      <BrowserRouter>
-    <div className='bg-gradient-to-br from-[#413d4c] from-10% via-[#59434f]] via-30% to-[#594753] to-90% ... md:bg-primary md:bg-cover bg-top-0 bg-left-0 md:bg-primary  md:bg-cover md:bg-center md:bg-fixed relative z-0 '>
-    
+   <div className='bg-gradient-to-br from-[#413d4c] from-10% via-[#59434f]] via-30% to-[#594753] to-90% ... md:bg-primary md:bg-cover bg-top-0 bg-left-0 md:bg-primary  md:bg-cover md:bg-center md:bg-fixed relative z-0 '>
           <Navbar />
           <Hero />
         

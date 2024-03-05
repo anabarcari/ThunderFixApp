@@ -2,7 +2,7 @@
   "name": "roman-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://www.thunderfixpdr.us",
+  "homepage": "https://www.thunderfixpdr.us",
   "type": "module",
   "scripts": {
     "dev": "vite",

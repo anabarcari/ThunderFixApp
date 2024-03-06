@@ -2,22 +2,9 @@ import React from 'react';
 import { styles } from '../styles';
 import bmw from '../assets/Thunderfix.png';
 import '../heroStyles.css';
-import { useState } from 'react';
 import { FiInstagram } from 'react-icons/fi';
-import Modal from 'react-modal';
-
-const CallModal = ({ isOpen, onRequestClose }) => (
-  <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
-    <h2>Ready to Make a Call?</h2>
-    <p>Tap the number to call us now!</p>
-    <a href="tel:+18885030755" className="call-link">+1 888-503-0755</a>
-    <button onClick={onRequestClose}>Close</button>
-  </Modal>
-);
 
 const Hero = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
   return (
     <section className="hero-container" style={{ overflow: 'auto', height: '100vh' }}>
       <div className="relative w-full h-full bg-primary bg-top bg-contain md:bg-cover sm:bg-fixed bg-no-repeat z-0">
@@ -31,10 +18,9 @@ const Hero = () => {
               After a heavy hailstorm, your vehicle may suffer from dents and damage. At Thunder Fix Auto Hail Repair, we specialize in preserving your vehicle's finish and value with our top-notch paintless dent repair, known as PDR. Thunder Fix Auto Hail Repair-Your satisfaction is our priority!
             </p>
             <div className="flex mt-4 justify-center items-center">
-              <button onClick={() => setModalIsOpen(true)} className="mr-4 bg-tertiary text-white px-4 py-2 rounded-lg transition duration-300 hover:purple">
+              <a href="tel:+18885030755" className="mr-4 bg-tertiary text-white px-4 py-2 rounded-lg transition duration-300 hover:bg-purple-600">
                 Call Now
-              </button>
-              <CallModal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} />
+              </a>
               <a href="#contact">
                 <button className="bg-tertiary text-white text-bold px-4 py-2 rounded-lg">Contact Us</button>
               </a>

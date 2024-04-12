@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
           
           <a
-            href="https://www.instagram.com/thunderfixpdr/?igsh=MmdidG15MXU2NTVk"
+            href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk "
             target="_blank"
             rel="noopener noreferrer"
           >

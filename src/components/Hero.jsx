@@ -25,7 +25,7 @@ const Hero = () => {
                 <button className="bg-tertiary text-white text-bold px-4 py-2 rounded-lg">Contact Us</button>
               </a>
             </div>
-            <a className="flex justify-center items-center mt-4" href="https://www.instagram.com/thunderfixpdr/?igsh=MmdidG15MXU2NTVk" target="_blank" rel="noopener noreferrer">
+            <a className="flex justify-center items-center mt-4" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk " target="_blank" rel="noopener noreferrer">
               <FiInstagram className="text-white text-4xl mt-4 cursor-pointer" />
             </a>
           </div>

@@ -3,6 +3,7 @@ import { styles } from '../styles';
 import bmw from '../assets/Thunderfix.png';
 import '../heroStyles.css';
 import { FiInstagram } from 'react-icons/fi';
+import { FaMapMarkerAlt } from 'react-icons/fa'; // Import Google Maps icon
 
 const Hero = () => {
   return (
@@ -25,9 +26,15 @@ const Hero = () => {
                 <button className="bg-tertiary text-white text-bold px-4 py-2 rounded-lg">Contact Us</button>
               </a>
             </div>
-            <a className="flex justify-center items-center mt-4" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk " target="_blank" rel="noopener noreferrer">
-              <FiInstagram className="text-white text-4xl mt-4 cursor-pointer" />
-            </a>
+            <div className="flex mt-4 justify-center items-center">
+              <a className="flex justify-center items-center" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk " target="_blank" rel="noopener noreferrer">
+                <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
+              </a>
+              <a className="flex justify-center items-center" href="https://maps.app.goo.gl/rYQdYNBTNZeCroN76?g_st=ic " target="_blank" rel="noopener noreferrer">
+              
+              <FaMapMarkerAlt className="text-white text-4xl cursor-pointer" />
+              <span className="text-white text-lg cursor-pointer underline hover:text-blue-500">8126 E McKinney St Unit K9, Denton, TX 76208</span></a>
+            </div>
           </div>
         </div>
       </div>

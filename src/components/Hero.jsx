@@ -11,11 +11,11 @@ const Hero = () => {
       <div className="relative w-full h-full bg-primary bg-top bg-contain md:bg-cover sm:bg-fixed bg-no-repeat z-0">
         <div className={`relative inset-0 max-w-7xl mx-auto ${styles.paddingX} flex flex-col items-center justify-center z-0`}>
           <img src={bmw} alt="BMW" className="p-15 mt-[38px] md:mt-[-59px] w-76 w-auto h-56 mx-auto sm:h-82 lg:h-96 xl:h-[500px] z-0" />
-          <div className="text-center bg-white p-5 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-15 text-container rounded-lg shadow-neon mt-[-40px] md:mt-[-150px] z-0 ">
+          <div className="text-center bg-white p-1 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-15 text-container rounded-lg shadow-neon mt-[-40px] md:mt-[-150px] z-0 ">
             <h1 className={`${styles.heroHeadText} text-white`} style={{ textShadow: '0 0 10px #aaa6c3, 0 0 30px #000000, 0 0 35px #000000' }}>
               <span className='text-white'>WE CARE ABOUT YOUR CAR</span>
             </h1>
-            <p className={`${styles.heroSubText} mt-4 text-white-100`} style={{ textShadow: '0 0 10px #aaa6c3, 0 0 30px #000000, 0 0 35px #000000' }}>
+            <p className={`${styles.heroSubText} mt-1 text-white-100`} style={{ textShadow: '0 0 10px #aaa6c3, 0 0 30px #000000, 0 0 35px #000000' }}>
               After a heavy hailstorm, your vehicle may suffer from dents and damage. At Thunder Fix Auto Hail Repair, we specialize in preserving your vehicle's finish and value with our top-notch paintless dent repair, known as PDR. Thunder Fix Auto Hail Repair-Your satisfaction is our priority!
             </p>
             <div className="flex mt-4 justify-center items-center">
@@ -30,10 +30,16 @@ const Hero = () => {
               <a className="flex justify-center items-center" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk " target="_blank" rel="noopener noreferrer">
                 <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
               </a>
-              <a className="flex justify-center items-center" href="https://maps.app.goo.gl/rYQdYNBTNZeCroN76?g_st=ic " target="_blank" rel="noopener noreferrer">
-              
-              <FaMapMarkerAlt className="text-white text-4xl cursor-pointer" />
-              <span className="text-white text-lg cursor-pointer underline hover:text-blue-500">8126 E McKinney St Unit K9, Denton, TX 76208</span></a>
+              <div className="flex flex-col items-center mt-4">
+                <a className="flex justify-center items-center" href="https://maps.app.goo.gl/rYQdYNBTNZeCroN76?g_st=ic " target="_blank" rel="noopener noreferrer">
+                  <FaMapMarkerAlt className="text-white text-4xl cursor-pointer" />
+                  <span className="text-white text-lg cursor-pointer underline hover:text-blue-500 ml-2">8126 E McKinney St Unit K9, Denton, TX 76208</span>
+                </a>
+                <a className="flex justify-center items-center mt-4" href="https://maps.app.goo.gl/59rQJCEYkxAkTtRy9?g_st=iw " target="_blank" rel="noopener noreferrer">
+                  <FaMapMarkerAlt className="text-white text-4xl cursor-pointer" />
+                  <span className="text-white text-lg cursor-pointer underline hover:text-blue-500 ml-2">908 S 1st St Suite 1, Temple, TX 76504</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

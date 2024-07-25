@@ -26,6 +26,8 @@ const App=()=> {
         <Works /> 
        
         <Feedbacks />
+
+    
           </div>
           <div className='bg-night bg-cover bg-center relative z-0'>
           <Contact />

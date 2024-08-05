@@ -7,13 +7,12 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-
-
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [errors, setErrors] = useState({
@@ -57,6 +56,7 @@ const Contact = () => {
           to_name: "Thunder Fix Auto Hail Repair",
           from_email: form.email,
           to_email: "20rcauto21@gmail.com",
+          phone: form.phone,
           message: form.message,
         },
         'oFuV_6_VBLHga1RUA' // Replace with your public key
@@ -65,11 +65,12 @@ const Contact = () => {
         (response) => {
           setLoading(false);
           console.log('EmailJS Response:', response);
-          alert("Thank you. We will get back to you as soon as possible.");
+          alert("Thank you. We will get back to you within the next 24 hours. Please check your spam folder in case our email is mistakenly filtered there.");
 
           setForm({
             name: "",
             email: "",
+            phone: "",
             message: "",
           });
           setErrors({
@@ -86,11 +87,11 @@ const Contact = () => {
 
   return (
     <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden `}>
-      <motion.div variants={slideIn("left", "tween", 0.2, 1)} className='flex-[0.75] bg-black-100 p-8 rounded-2xl  shadow-neon'>
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+      <motion.div variants={slideIn("left", "tween", 0.2, 1)} className='flex-[0.75] bg-black-100 p-6 rounded-2xl shadow-neon'>
+        
+        <h2 className={styles.sectionHeadText}>Contact.</h2>
 
-        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
+        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-4'>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Email</span>
             <input
@@ -103,7 +104,7 @@ const Contact = () => {
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Confirm email</span>
+            <span className='text-white font-medium mb-4'>Confirm Email</span>
             <input
               type='email'
               name='email'
@@ -115,13 +116,24 @@ const Contact = () => {
             {errors.email && <span className='text-red-500'>{errors.email}</span>}
           </label>
           <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>Your Phone Number</span>
+            <input
+              type='text'
+              name='phone'
+              value={form.phone}
+              onChange={handleChange}
+              placeholder="Please, enter your phone"
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+            />
+          </label>
+          <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='Please, leave us a message'
+              placeholder='Please leave us a message'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -138,10 +150,8 @@ const Contact = () => {
       <motion.div variants={slideIn("right", "tween", 0.2, 1)} className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
         <EarthCanvas />
       </motion.div>
-    
     </div>
-     );
-  
+  );
 };
 
 export default SectionWrapper(Contact, "contact");

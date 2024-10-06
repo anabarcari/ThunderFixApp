@@ -16,7 +16,9 @@ const Hero = () => {
               <span className='text-white'>WE CARE ABOUT YOUR CAR</span>
             </h1>
             <p className={`${styles.heroSubText} mt-1 text-white-100`} style={{ textShadow: '0 0 10px #aaa6c3, 0 0 30px #000000, 0 0 35px #000000' }}>
-              After a heavy hailstorm, your vehicle may suffer from dents and damage. At Thunder Fix Auto Hail Repair, we specialize in preserving your vehicle's finish and value with our top-notch paintless dent repair, known as PDR. Thunder Fix Auto Hail Repair-Your satisfaction is our priority!
+              After a heavy hailstorm, your vehicle may suffer from dents and damage.
+              At Thunder Fix Auto Hail Repair, we specialize in preserving your car's finish and value with expert paintless dent repair (PDR).
+               Thunder Fix Auto Hail Repair-Your satisfaction is our priority!
             </p>
             <div className="flex mt-4 justify-center items-center">
               <a href="tel:+18885030755" className="mr-4 bg-tertiary text-white px-4 py-2 rounded-lg transition duration-300 hover:bg-purple-600">
@@ -27,20 +29,25 @@ const Hero = () => {
               </a>
             </div>
             <div className="flex mt-4 justify-center items-center">
-              <a className="flex justify-center items-center" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk " target="_blank" rel="noopener noreferrer">
-                <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
-              </a>
-              <div className="flex flex-col items-center mt-4">
-                <a className="flex justify-center items-center" href="https://maps.app.goo.gl/rYQdYNBTNZeCroN76?g_st=ic " target="_blank" rel="noopener noreferrer">
-                  <FaMapMarkerAlt className="text-white text-4xl cursor-pointer" />
-                  <span className="text-white text-lg cursor-pointer underline hover:text-blue-500 ml-2">8126 E McKinney St Unit K9, Denton, TX 76208</span>
-                </a>
-                <a className="flex justify-center items-center mt-4" href="https://maps.app.goo.gl/59rQJCEYkxAkTtRy9?g_st=iw " target="_blank" rel="noopener noreferrer">
-                  <FaMapMarkerAlt className="text-white text-4xl cursor-pointer" />
-                  <span className="text-white text-lg cursor-pointer underline hover:text-blue-500 ml-2">908 S 1st St Suite 1, Temple, TX 76504</span>
-                </a>
-              </div>
-            </div>
+  <a className="flex justify-center items-center" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk" target="_blank" rel="noopener noreferrer">
+    <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
+  </a>
+  <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/rYQdYNBTNZeCroN76?g_st=ic" target="_blank" rel="noopener noreferrer">
+      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">8126 E McKinney St Unit K9, Denton, TX</span>
+    </a>
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/59rQJCEYkxAkTtRy9?g_st=iw" target="_blank" rel="noopener noreferrer">
+      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">908 S 1st St Suite 1, Temple, TX</span>
+    </a>
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/MUTycQpAtxS8c3gz5?g_st=iw" target="_blank" rel="noopener noreferrer">
+      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">7300 NW 164th St Suite 9, Edmond, OK</span>
+    </a>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

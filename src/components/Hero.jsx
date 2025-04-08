@@ -33,18 +33,11 @@ const Hero = () => {
     <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
   </a>
   <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
-    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/rYQdYNBTNZeCroN76?g_st=ic" target="_blank" rel="noopener noreferrer">
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/VcBEeejRwyBJZPmN8?g_st=ic" target="_blank" rel="noopener noreferrer">
       <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
-      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">8126 E McKinney St Unit K9, Denton, TX</span>
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">3511 Central E Fwy, Wichita Falls, TX 76306</span>
     </a>
-    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/59rQJCEYkxAkTtRy9?g_st=iw" target="_blank" rel="noopener noreferrer">
-      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
-      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">908 S 1st St Suite 1, Temple, TX</span>
-    </a>
-    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/MUTycQpAtxS8c3gz5?g_st=iw" target="_blank" rel="noopener noreferrer">
-      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
-      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">7300 NW 164th St Suite 9, Edmond, OK</span>
-    </a>
+   
   </div>
 </div>
 

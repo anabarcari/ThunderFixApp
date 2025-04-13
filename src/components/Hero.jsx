@@ -33,9 +33,13 @@ const Hero = () => {
     <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
   </a>
   <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
-    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/VcBEeejRwyBJZPmN8?g_st=ic" target="_blank" rel="noopener noreferrer">
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/kvKj1wh2iEfTKC5Z6" target="_blank" rel="noopener noreferrer">
       <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
-      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">3511 Central E Fwy, Wichita Falls, TX 76306</span>
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">3127 Lawrence Rd, Wichita Falls, TX 76308</span>
+    </a>
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/Nkk2N8hECXLkfCh36" target="_blank" rel="noopener noreferrer">
+      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">1703 Seymour Hwy, Wichita Falls, TX 76301</span>
     </a>
    
   </div>

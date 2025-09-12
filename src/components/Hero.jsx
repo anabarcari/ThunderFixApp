@@ -39,6 +39,13 @@ const Hero = () => {
     </a>
    
   </div>
+  <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/S12xHRFPspPPVJ1X6" target="_blank" rel="noopener noreferrer">
+      <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">903 E Venture Ct Suite D, Kechi, KS 67067</span>
+    </a>
+   
+  </div>
 </div>
 
           </div>

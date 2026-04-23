@@ -17,28 +17,34 @@ const Carousel = ({
 
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
+
   const next = () =>
     setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
-    useEffect(() => {
-      const calculateContainerHeight = () => {
-        const firstImage = new Image();
-        firstImage.src = slides[0];
-        firstImage.onload = () => {
-          const aspectRatio = firstImage.width / firstImage.height;
-          const maxWidth = 550; // Set a maximum width for the container
-          const calculatedHeight = Math.min(window.innerWidth / aspectRatio, maxWidth);
-          setContainerHeight(calculatedHeight);
-        };
+  useEffect(() => {
+    if (!slides?.length) return;
+
+    const calculateContainerHeight = () => {
+      const firstImage = new Image();
+      firstImage.src = slides[0];
+      firstImage.onload = () => {
+        const aspectRatio = firstImage.width / firstImage.height;
+        const maxWidth = 550;
+        const calculatedHeight = Math.min(
+          window.innerWidth / aspectRatio,
+          maxWidth
+        );
+        setContainerHeight(calculatedHeight);
       };
-    
-      calculateContainerHeight();
-      window.addEventListener('resize', calculateContainerHeight);
-    
-      return () => {
-        window.removeEventListener('resize', calculateContainerHeight);
-      };
-    }, [curr, slides]);
+    };
+
+    calculateContainerHeight();
+    window.addEventListener("resize", calculateContainerHeight);
+
+    return () => {
+      window.removeEventListener("resize", calculateContainerHeight);
+    };
+  }, [slides]);
 
   return (
     <>
@@ -61,42 +67,71 @@ const Carousel = ({
         }
       `}</style>
 
-      <div className="carousel rounded-md ">
+      <div
+        className="carousel rounded-xl"
+        style={{
+          border: "1px solid rgba(255,255,255,0.08)",
+          boxShadow:
+            "0 0 25px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.7)",
+          background: "rgba(10,10,10,0.4)",
+          backdropFilter: "blur(6px)",
+        }}
+      >
         <div
-          className="carousel-inner object-cover h-full w-full "
+          className="carousel-inner w-full h-full"
           style={{ transform: `translateX(-${curr * 100}%)` }}
         >
           {slides.map((img, index) => (
             <img key={index} src={img} alt="" className="carousel-image" />
           ))}
         </div>
-        <div className="absolute inset-0 flex items-center justify-between p-4">
+
+        {/* Arrows */}
+        <div className="absolute inset-0 flex items-center justify-between px-4">
           <button
             onClick={prev}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            style={{
+              background: "rgba(0,0,0,0.6)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 0 12px rgba(0,0,0,0.8)",
+              color: "white",
+            }}
+            className="p-2 rounded-full hover:bg-black transition"
           >
-            <ChevronLeft size={40} />
+            <ChevronLeft size={26} />
           </button>
+
           <button
             onClick={next}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            style={{
+              background: "rgba(0,0,0,0.6)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 0 12px rgba(0,0,0,0.8)",
+              color: "white",
+            }}
+            className="p-2 rounded-full hover:bg-black transition"
           >
-            <ChevronRight size={40} />
+            <ChevronRight size={26} />
           </button>
         </div>
+
+        {/* Dots */}
         <div className="absolute bottom-4 right-0 left-0">
-        <div className="flex items-center justify-center gap-2">
-          {slides.map((_, i) => (
-            <div
-              key={i}
-              className={`
-              transition-all w-3 h-3 bg-white rounded-full
-              ${curr === i ? "p-2" : "bg-opacity-50"}
-            `}
-            />
-          ))}
+          <div className="flex items-center justify-center gap-2">
+            {slides.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  background:
+                    curr === i
+                      ? "white"
+                      : "rgba(255,255,255,0.25)",
+                }}
+                className="transition-all w-2.5 h-2.5 rounded-full"
+              />
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </>
   );

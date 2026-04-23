@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="social-icons">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/share/17uSW1EDie/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-text">
-        © 2024 Thunder Fix Auto Hail Repair. All rights reserved.
+        © 2026 Thunder Fix Auto Hail Repair. All rights reserved.
       </div>
     </footer>
   );

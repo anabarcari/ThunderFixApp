@@ -1,62 +1,96 @@
-import { Tilt } from 'react-tilt';
+import React from "react";
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services2 } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import backgroundVideo from "../assets/video2.mp4";
-import React, { useRef, useState, useEffect } from "react";
-
-
 
 const ServiceCard = ({ index, title, description }) => (
-  <Tilt className="xs:w-[250px] w-full">
+  <Tilt className="xs:w-[260px] w-full">
     <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="w-full orange-purple-gradient p-[1px] rounded-[25px] shadow-card" 
-      
+      variants={fadeIn("right", "spring", 0.2 * index, 0.75)}
+      className="w-full p-[1px] rounded-[24px]"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)",
+        boxShadow:
+          "0 0 22px rgba(0,0,0,0.85), 0 0 8px rgba(0,0,0,0.65)",
+      }}
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
+        className="rounded-[24px] py-6 px-6 flex flex-col gap-6"
+        style={{
+          background: "rgba(15,15,15,0.55)",
+          border: "1px solid rgba(255,255,255,0.06)",
+          backdropFilter: "blur(6px)",
         }}
-        className="bg-sec bg-cover bg-center rounded-[30px] py-5 px-12 min-h-[50px] flex justify-evenly items-center flex-col "style={{ height: "300px" }}
       >
-        
-        <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
-        <h4 className="text-white text-[20px] text-center bg-white p-3 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg bg-opacity-0 text-container">{description}</h4>
+        <h3 className="text-white text-[18px] font-semibold text-center">
+          {title}
+        </h3>
+
+        <p className="text-white/80 text-[15px] text-center leading-relaxed">
+          {description}
+        </p>
       </div>
     </motion.div>
   </Tilt>
 );
 
 const Works = () => {
-  
-
   return (
     <>
       <motion.div variants={textVariant()}>
-        
-        <h2 className={styles.sectionHeadText} style={{ textShadow: ' 0 0 10px #aaa6c3,  0 0 30px #000000, 0 0 35px #000000' }}>Why Choose Thunder Fix Auto Hail Repair?</h2>
+        <h2
+          className={`${styles.sectionHeadText} text-center`}
+          style={{
+            textShadow:
+              "0 0 10px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.95)",
+          }}
+        >
+          Why Choose Thunder Fix Auto Hail Repair?
+        </h2>
       </motion.div>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        
-        
+
+      {/* Video Frame */}
+      <div
+        className="mt-12 rounded-2xl p-[1px]"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%)",
+          boxShadow:
+            "0 0 25px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.7)",
+        }}
       >
-       
-      </motion.p>
-      <div className="video-container relative rounded-lg shadow-neon">
-        <video autoPlay loop muted playsInline id="video" className="w-full h-full object-cover rounded-lg" > 
-          <source src={backgroundVideo} type="video/mp4" />
-        </video>
-        
+        <div
+          className="rounded-2xl overflow-hidden"
+          style={{
+            background: "rgba(15,15,15,0.6)",
+            border: "1px solid rgba(255,255,255,0.06)",
+          }}
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+          </video>
+        </div>
       </div>
-      <div className="mt-20 flex flex-wrap gap-10">
+
+      {/* Cards */}
+      <div className="mt-16 flex flex-wrap gap-8 justify-center">
         {services2.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+          <ServiceCard
+            key={service.title}
+            index={index}
+            {...service}
+          />
         ))}
       </div>
     </>

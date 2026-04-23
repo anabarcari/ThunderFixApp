@@ -3,7 +3,8 @@ import { styles } from '../styles';
 import bmw from '../assets/Thunderfix.png';
 import '../heroStyles.css';
 import { FiInstagram } from 'react-icons/fi';
-import { FaMapMarkerAlt } from 'react-icons/fa'; // Import Google Maps icon
+import { FaMapMarkerAlt, FaFacebookF } from 'react-icons/fa';
+
 
 const Hero = () => {
   return (
@@ -32,20 +33,29 @@ const Hero = () => {
   <a className="flex justify-center items-center" href="https://www.instagram.com/thunder_fix_pdr?igsh=MmdidG15MXU2NTVk" target="_blank" rel="noopener noreferrer">
     <FiInstagram className="text-white text-4xl mt-4 mr-2 cursor-pointer" />
   </a>
-  <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
-    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/xSyN5s72LB2waJQC6" target="_blank" rel="noopener noreferrer">
+  
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/share/17uSW1EDie/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF className="text-white text-4xl cursor-pointer hover:text-blue-500 transition duration-300" />
+              </a>
+{ <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
+    <a className="flex justify-center items-center" href="https://maps.app.goo.gl/PwYNbYN5abLT2r4h9" target="_blank" rel="noopener noreferrer">
       <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
-      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">3511 Central E Fwy, Wichita Falls, TX 76306</span>
+      <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">1328 La Porte Rd, Waterloo, IA 50702</span>
     </a>
    
-  </div>
-  <div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
+  </div>}
+  {/*<div className="flex flex-wrap justify-center items-center mt-4 space-y-2 space-x-4">
     <a className="flex justify-center items-center" href="https://maps.app.goo.gl/S12xHRFPspPPVJ1X6" target="_blank" rel="noopener noreferrer">
       <FaMapMarkerAlt className="text-white text-3xl cursor-pointer" />
       <span className="text-white text-sm cursor-pointer underline hover:text-blue-500 ml-2">903 E Venture Ct Suite D, Kechi, KS 67067</span>
     </a>
    
-  </div>
+  </div>*/}
 </div>
 
           </div>

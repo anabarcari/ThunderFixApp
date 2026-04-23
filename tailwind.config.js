@@ -11,9 +11,9 @@ module.exports = {
         "white-100": "#f3f3f3",
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #000000",
-        neon: "0 0 3px theme('colors.purple.300'), 0 0 10px theme('colors.purple.700')"
-      },
+  card: "0px 35px 120px -15px #000000",
+  neon: "0 0 20px rgba(0,0,0,0.85), 0 0 8px rgba(0,0,0,0.65)"
+},
       screens: {
         xs: '450px',
         sm: '640px',

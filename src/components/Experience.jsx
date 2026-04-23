@@ -16,37 +16,42 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "rgba(15,15,15,0.6)",
         color: "#fff",
+        border: "1px solid rgba(255,255,255,0.06)",
+        boxShadow: "0 0 20px rgba(0,0,0,0.8)",
+        borderRadius: "16px",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{
+        borderRight: "7px solid rgba(15,15,15,0.6)",
+      }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      dateClassName="text-white"
+      iconStyle={{
+        background: "#111111",
+        boxShadow: "0 0 15px rgba(0,0,0,0.8)",
+      }}
       icon={
-        <div className='flex justify-center items-center w-full h-full'>
+        <div className="flex justify-center items-center w-full h-full">
           <img
             src={experience.icon}
-            alt={experience.company_name}
-            className='w-[100%] h-[100%] object-contain'
+            alt=""
+            className="w-[60%] h-[60%] object-contain opacity-80"
           />
         </div>
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-        <p
-          className='text-secondary text-[16px] font-semibold'
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
+        <h3 className="text-white text-[22px] font-bold">
+          {experience.title}
+        </h3>
       </div>
 
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
+      <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
-            key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            key={index}
+            className="text-gray-300 text-[14px] pl-1 tracking-wide"
           >
             {point}
           </li>
@@ -60,18 +65,24 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-
-       
-        <h2 className={`${styles.sectionHeadText} text-center`}style={{ textShadow: ' 0 0 10px #aaa6c3,  0 0 30px #000000, 0 0 35px #000000' }}>
-        Repair Process:
+        <h2
+          className={`${styles.sectionHeadText} text-center`}
+          style={{
+            textShadow:
+              "0 0 10px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.95)",
+          }}
+        >
+          Repair Process
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline
+          lineColor="rgba(255,255,255,0.1)"
+        >
           {experiences.map((experience, index) => (
             <ExperienceCard
-              key={`experience-${index}`}
+              key={index}
               experience={experience}
             />
           ))}
